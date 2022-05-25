@@ -1,0 +1,26 @@
+{
+    "name": "45lailson/module-href-lang",
+    "description": "Magento 2 Identify Store Lang by Id",
+    "require": {
+        "php": "^7.1.0",
+        "magento/product-community-edition": "^2.3"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Lailson Sousa",
+            "email": "lailson4545@hotmail.com",
+            "homepage": "https://github.com/45lailson",
+            "role": "Leader"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Href\\Lang\\": "src/"
+        }
+    }
+}
