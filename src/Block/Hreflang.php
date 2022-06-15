@@ -71,7 +71,7 @@ class Hreflang extends \Magento\Framework\View\Element\Template
     {
         // if metatag de exibição de várias lojas
         if (self::isCmsPageMultiStore())
-            return sprintf('<link rel="alternate" hreflang="%s" href="%s">', self::getLanguageStore(), self::getCurrentUrl());
+            return sprintf('<link rel="alternate" hreflang="%s" href="%s">', $this->getLanguageStore(), $this->getCurrentUrl());
 
         return __("");
     }
