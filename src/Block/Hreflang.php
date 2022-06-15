@@ -26,6 +26,7 @@ class Hreflang extends \Magento\Framework\View\Element\Template
      * @param Page $page
      * @param array $data
      */
+    
     public function __construct(Template\Context $context, Resolver $locale, Page $cmsPage, array $data = [])
     {
         $this->_storeManager = $context->getStoreManager();
@@ -38,6 +39,7 @@ class Hreflang extends \Magento\Framework\View\Element\Template
      * obter a localidade e converter formato country-lang
      * @return string
      */
+    
     public function getLanguageStore()
     {
         return strtolower(str_replace("_", "-", $this->_locale->getLocale()));
@@ -47,6 +49,7 @@ class Hreflang extends \Magento\Framework\View\Element\Template
      * Contar e verificar é multi-loja
      * @return bool
      */
+    
     public function isCmsPageMultiStore()
     {
         $storesCms = $this->_cmsPage->getStores();
@@ -58,6 +61,7 @@ class Hreflang extends \Magento\Framework\View\Element\Template
      * @return string
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
+    
     public function getCurrentUrl()
     {
         return $this->_storeManager->getStore()->getBaseUrl() . $this->_cmsPage->getIdentifier();
@@ -67,6 +71,7 @@ class Hreflang extends \Magento\Framework\View\Element\Template
      * retornar html da meta-tag
      * @return string
      */
+    
     public function getMetaTagHrefLanguage()
     {
         // if metatag de exibição de várias lojas
